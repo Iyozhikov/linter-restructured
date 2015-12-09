@@ -1,0 +1,21 @@
+{
+  "linter-package": true,
+  "name": "linter-rest",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "description": "Lint RST on the fly, using rst-lint",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.180.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-linter": "^3.2.0"
+  }
+}
