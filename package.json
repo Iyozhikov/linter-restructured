@@ -1,8 +1,9 @@
 {
   "linter-package": true,
-  "name": "linter-rest",
+  "name": "linter-restructured",
   "main": "./lib/main",
   "version": "1.0.0",
+  "repository": "https://github.com/Iyozhikov/linter-restructured",
   "description": "Lint RST on the fly, using rst-lint",
   "license": "MIT",
   "engines": {

@@ -1,0 +1,15 @@
+diff --git a/restructuredtext_lint/cli.py b/restructuredtext_lint/cli.py
+index 6d32f21..62ba4e4 100644
+--- a/restructuredtext_lint/cli.py
++++ b/restructuredtext_lint/cli.py
+@@ -14,7 +14,8 @@ def _main(filepaths, format='text', stream=sys.stdout, encoding=None):
+         file_errors = lint_file(filepath, encoding=encoding)
+ 
+         if not file_errors:
+-            stream.write('INFO File {filepath} is clean.\n'.format(filepath=filepath))
++            if format == 'text':
++                stream.write('INFO File {filepath} is clean.\n'.format(filepath=filepath))
+         else:
+             error_occurred = True
+             if format == 'text':
+

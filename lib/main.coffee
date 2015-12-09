@@ -9,7 +9,7 @@ module.exports =
 
   activate: ->
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.config.observe 'linter-rest.executablePath',
+    @subscriptions.add atom.config.observe 'linter-restructured.executablePath',
       (executablePath) =>
         @executablePath = executablePath
 
@@ -19,9 +19,8 @@ module.exports =
   provideLinter: ->
     helpers = require('atom-linter')
     provider =
-      name: 'linter-rest'
+      name: 'linter-restructured'
       grammarScopes: ['text.reStructuredText', 'source.rst', 'text.restructuredtext source.gfm.restructuredtext']
-      #grammarScopes: ['*']
       scope: 'file' # or 'project'
       lintOnFly: true # must be false for scope: 'project'
       lint: (textEditor) =>
