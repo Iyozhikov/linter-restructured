@@ -22,7 +22,7 @@ Before using this plugin, you must ensure that `restructuredtext-lint` is instal
    cd restructuredtext-lint
 
    patch -p1 < rst-linter.patch
-   
+
    python setup.py sdist
 
    sudo pip install dist/restructuredtext_lint-0.12.4.tar.gz
@@ -35,7 +35,10 @@ Extract contents into ~/.atom/packages/:
    ```
    cp -r /tmp/linter-restructured ~/.atom/packages/
    ```
-
+Install [language-restructuredtext](https://atom.io/packages/language-restructuredtext)
+   ```
+   apm install language-restructuredtext
+   ```
 #### Settings
 You can configure linter-rest from the settings menu:
 * **ExecutablePath** Path to your rst-lint executable.
